@@ -717,18 +717,39 @@ img{display:block;max-width:100%;}
   .mob-link{font-size:20px;padding:14px 0;}
 
   /* Hero */
-  .lux-hero{padding-bottom:200px;}
-  .hero-content{padding:0 1.2rem;padding-top:70px;}
-  .hero-title{font-size:38px;letter-spacing:-1px;}
-  .hero-sub{font-size:14px;}
+  .lux-hero{
+    display:block;
+    min-height:100svh;
+    padding:76px 0 0;
+  }
+  .hero-content{
+    padding:28px 1rem 0;
+    max-width:100%;
+  }
+  .hero-eyebrow{
+    display:block;
+    max-width:100%;
+    font-size:9px;
+    line-height:1.45;
+    letter-spacing:3px;
+    margin-bottom:22px;
+  }
+  .hero-eyebrow::before,.hero-eyebrow::after{display:none;}
+  .hero-title{font-size:34px;letter-spacing:0;line-height:1;}
+  .hero-sub{font-size:13px;line-height:1.75;max-width:100%;margin-bottom:28px;}
   .hero-actions{flex-direction:column;gap:10px;}
   .btn-lux,.btn-lux-ghost{width:100%;text-align:center;padding:14px;}
   .hero-stats-row{
-    position:relative;grid-template-columns:1fr 1fr;
-    margin-top:32px;
+    position:relative;
+    bottom:auto;left:auto;right:auto;
+    width:100%;
+    grid-template-columns:1fr 1fr;
+    margin-top:28px;
+    border-bottom:1px solid rgba(201,169,110,0.12);
   }
-  .hero-stat{padding:16px;}
+  .hero-stat{padding:16px 14px;min-width:0;}
   .hs-num{font-size:22px;}
+  .hs-lbl{font-size:9px;letter-spacing:1.2px;line-height:1.35;}
 
   /* Sections */
   .lux-section{padding:50px 1.2rem;}
@@ -808,11 +829,22 @@ img{display:block;max-width:100%;}
 }
 
 @media(max-width:400px){
+  .lux-nav{padding:0 .85rem;}
+  .nav-logo-wrap{gap:8px;}
+  .nav-logo-img{height:30px;max-width:42px;min-width:34px;}
+  .nav-logo-text{font-size:13px;letter-spacing:.8px;}
+  .nav-logo-sub{font-size:7px;letter-spacing:1px;}
+  .hamburger{padding:6px;}
+  .hero-content{padding-left:.9rem;padding-right:.9rem;}
   .hero-title{font-size:30px;}
+  .hero-eyebrow{font-size:8px;letter-spacing:2.2px;}
   .placement-stats{grid-template-columns:1fr;}
   .students-mosaic{grid-template-columns:1fr;}
   .about-stat-block{grid-template-columns:1fr;}
   .affil-grid{grid-template-columns:1fr;}
+  .hero-stats-row{grid-template-columns:1fr;}
+  .hero-stat{border-right:none;border-bottom:1px solid rgba(201,169,110,0.12);}
+  .hero-stat:last-child{border-bottom:none;}
 }
 
 .nav-logo-img,.lf-brand-logo img{background:#fff;border:1px solid rgba(201,169,110,.45);border-radius:6px;padding:3px;min-width:40px;object-fit:contain;}
